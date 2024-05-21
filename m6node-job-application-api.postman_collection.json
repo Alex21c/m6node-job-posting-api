@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "a4c4c2db-de1c-4a7e-8b09-090778fd0d02",
+		"name": "m6node-job-application-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32540147"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kabir@alex21c.com\",\r\n    \"password\": \"admin123\",\r\n    \"firstName\": \"Abhishek\",\r\n    \"lastName\": \"Kumar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/user/sign-up",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign-in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kabir@alex21c.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/user/sign-in",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate-auth-token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjQ5OGYyYmY3NmM2ODg3NjZhM2YxMzYiLCJpYXQiOjE3MTYwOTcwNjMsImV4cCI6MTcxODY4OTA2M30.wao5LzHELl7igZu9Oc4UllQNBt8DhJfViUEXU6EySSI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/user/validate-auth-token",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"validate-auth-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "create a job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRjOTdiMTU0NmU3MjA2ZTRkNTk0NWQiLCJpYXQiOjE3MTYyOTU2MDEsImV4cCI6MTcxNjQ2ODQwMX0.HPT_kFyfd5G2wrZbsGikWSvQd-wtkHnaysYPHxfi8uo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobTitle\" : \"77 Full Stack Developer (MERN)\",\r\n  \"companyName\" : \"Alex21C Pvt. Ltd.\",\r\n  \"role\" : \"SDE\",\r\n  \"location\" : \"Sunder Nagar, Himachal Pradesh, India\",\r\n  \"jobDescription\" : \"Lorem ipsum set amet dollor Lorem\",\r\n  \"ctc\" : 1200000,\r\n  \"keywords\" : \"MERN Stack Developer, Full Stack Developer, SDE\",\r\n  \"currency\" : \"₹\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/job/create-job",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"create-job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a job",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRjOTdiMTU0NmU3MjA2ZTRkNTk0NWQiLCJpYXQiOjE3MTYyOTU2MDEsImV4cCI6MTcxNjQ2ODQwMX0.HPT_kFyfd5G2wrZbsGikWSvQd-wtkHnaysYPHxfi8uo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"_id\": \"664ca7174b30412c3993808e\",\r\n            \"jobTitle\": \"UPDATD 4 Full Stack Developer (MERN)\",\r\n            \"companyName\": \"Alex21C Pvt. Ltd.\",\r\n            \"role\": \"SDE\",\r\n            \"location\": \"Sunder Nagar, Himachal Pradesh, India\",\r\n            \"jobDescription\": \"Lorem ipsum set amet dollor Lorem\",\r\n            \"ctc\": 1200000,\r\n            \"keywords\": \"MERN Stack Developer, Full Stack Developer, SDE\",\r\n            \"currency\": \"₹\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/job/update-job",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"update-job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all the jobs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/job/get-jobs",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"get-jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a job",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRjOTdiMTU0NmU3MjA2ZTRkNTk0NWQiLCJpYXQiOjE3MTYyOTU2MDEsImV4cCI6MTcxNjQ2ODQwMX0.HPT_kFyfd5G2wrZbsGikWSvQd-wtkHnaysYPHxfi8uo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"jobID\": \"664ca2f801454ec5a17d47b7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://m6node-job-posting-api.onrender.com/api/v1/job/delete-job",
+							"protocol": "https",
+							"host": [
+								"m6node-job-posting-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"delete-job"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
