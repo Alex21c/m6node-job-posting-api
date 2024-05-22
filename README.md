@@ -41,6 +41,12 @@ the MongoDB Connection string inside .env
 '1y'      // 31557600000
 ```
 
+## How to install and run in yours local machine
+```bash
+npm install
+npm run start
+```
+
 ## Postman API Endpoints file
 [Postman API Endpoints.json](m6node-job-application-api.postman_collection.json)
 
@@ -176,11 +182,7 @@ DELETE api/v1/job/delete-job
 ```
 
 
-## How to install and run in yours local machine
-```bash
-npm install
-npm run start
-```
+
 
 ## Tech. Stack Used:
 + [MongoDB](https://www.mongodb.com/) 
